@@ -1,0 +1,49 @@
+.main{
+    background-color: rgb(196, 227, 233);
+}
+.loginDiv{
+    display: inline;
+    font-size: 30px;
+	color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(196, 227, 233);
+}
+.input{
+    border-radius: 50px;
+    min-height: 40px;
+    font-size: 25px;
+    width: auto;
+    
+    
+}
+.registerDiv{
+    display: none;
+    font-size: 30px;
+	color: white;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(196, 227, 233);
+}
+.submit{
+    background-color: rgb(35, 136, 161);
+    border-radius: 50px;
+    color:white;
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.submit button:hover,
+.submit button:active {
+  background-color:rgb(18, 70, 83);
+  border-color: rgb(18, 70, 83);
+}
+.error{
+    display: none;
+    font-size: 30px;
+    color: red;
+}

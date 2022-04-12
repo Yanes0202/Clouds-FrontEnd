@@ -1,0 +1,58 @@
+.header{
+    background-color: rgb(35, 136, 161);
+    height: 100px;
+    flex:1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.headerLeft{
+    background-color: rgb(35, 136, 161);
+    height: 100px;
+    flex:1;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+.headerRight{
+    background-color: rgb(35, 136, 161);
+    height: 100px;
+    flex:1;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(196, 227, 233);
+}
+.h1{
+    color:white;
+}
+.naglowek{
+    display: flex;
+}
+.padding{
+    padding: 15px;
+}
+.loginbutton{
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    background-color: rgb(196, 227, 233);
+    margin-right: 10px;
+}
+.logoutButton{
+border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    background-color: rgb(196, 227, 233);
+    margin-right: 10px;
+}
+.logoutButton:hover,
+.logoutButton:active {
+  background-color: rgb(18, 70, 83);
+}
