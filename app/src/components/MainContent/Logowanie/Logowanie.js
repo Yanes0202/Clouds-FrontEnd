@@ -53,8 +53,8 @@ export default function Logowanie({ setToken }) {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (JSON.parse(xhr.responseText).status === "Success") {
           setToken(JSON.parse(xhr.responseText).token);
-          localStorage.setItem("token", JSON.parse(xhr.responseText).token);
-          window.location.href = "http://localhost:3000/";
+          //localStorage.setItem("token", JSON.parse(xhr.responseText).token);
+          //window.location.href = "http://localhost:3000/";
         } else {
           document.getElementById("loginError").style.display = "block";
         }
