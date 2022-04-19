@@ -2,17 +2,26 @@ import LogHeader from "../header/LogHeader";
 import MainHeader from "../header/MainHeader";
 import Logowanie from "../MainContent/Logowanie/Logowanie";
 import classes from "./Layout.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function Layout(props) {
-const [token, setToken] = useState();  
+const [token, setToken] = useState(false);
+const [user, setUser] = useState(); 
 
-if(!token){
+useEffect(()=>{
+  console.log(user);
+  const value = sessionStorage.getItem('token');
+  if(value){
+    setToken(true);
+  }
+},[]);
+
+if(token===false){
   return (
     <div>
       <LogHeader />
-      <Logowanie setToken={setToken} />
+      <Logowanie setToken = {setToken} setUser = {setUser}/>
     </div>
   );
 }
@@ -21,7 +30,7 @@ if(!token){
 
   return (
     <div className="main">
-      <MainHeader />
+      <MainHeader setToken={setToken} userData={user} />
       <main className={classes.main}>{props.children}</main>
     </div>
   );
