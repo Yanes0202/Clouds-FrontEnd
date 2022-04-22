@@ -1,0 +1,62 @@
+.background {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 25rem;
+  width: 50rem;
+  justify-content: center;
+}
+.br{
+  display: flex;
+  background-color: rgb(80, 121, 129);
+  justify-content: center;
+}
+.main{
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  min-width: 40rem;
+  background-color: rgb(116, 153, 160);
+
+}
+.userImage{
+    display: block;
+    margin-top: -50px;
+    border-radius: 50%;
+    
+}
+.userImage img{
+    border-style: solid;
+    border-color: rgb(35, 136, 161);
+    border-width: 5px;
+}
+.info{
+    flex:1;
+    text-align: center;
+    display: inline;
+    float: left;
+}
+.base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(80, 121, 129);
+}
+.actions button {
+  
+  font: inherit;
+  cursor: pointer;
+  color: #3a7bb1;
+  border: 1px solid #3a7bb1;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: rgb(18, 70, 83);
+}
+.information{
+    float: left;
+}

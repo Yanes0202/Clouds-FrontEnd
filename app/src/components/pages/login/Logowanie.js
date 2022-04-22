@@ -29,6 +29,18 @@ function registerUser(data){
     return xhr;
 }
 
+function getUserData(login) {
+  var xhr = new XMLHttpRequest();
+
+  //open the request
+  xhr.open("GET", "http://localhost:8080/api/user/" + login);
+  xhr.send();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      sessionStorage.setItem("userData",JSON.stringify(xhr.responseText));
+    }
+  };
+}
 
 
 export default function Logowanie({ setToken , setUser }) {
@@ -39,18 +51,7 @@ export default function Logowanie({ setToken , setUser }) {
   const nameInputRef = useRef();
   const lastNameInputRef = useRef();
 
-  function getUserData(login) {
-    var xhr = new XMLHttpRequest();
-
-    //open the request
-    xhr.open("GET", "http://localhost:8080/api/user/" + login);
-    xhr.send();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        setUser(JSON.parse(xhr.responseText));
-      }
-    };
-  }
+  
 
   function loginFormSubmit(event) {
     event.preventDefault();
@@ -67,7 +68,6 @@ export default function Logowanie({ setToken , setUser }) {
     xhr.onreadystatechange = function () {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (JSON.parse(xhr.responseText).status === "Success") {
-    
           sessionStorage.setItem("token", JSON.parse(xhr.responseText).token);
           getUserData(enteredLogin);
           setToken(true);

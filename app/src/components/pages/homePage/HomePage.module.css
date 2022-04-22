@@ -1,0 +1,38 @@
+.h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.section{
+    justify-content: center;
+    max-width: 40rem;
+
+}
+
+.loader{
+    height: 89.7% ;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(196, 227, 233);
+    position: absolute;
+}
+
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid white;
+    border-top-color: rgb(18, 70, 83);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear; 
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}

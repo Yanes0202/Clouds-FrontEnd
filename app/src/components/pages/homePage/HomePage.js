@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import PostList from "../posts/PostList";
-import classes from "./Main.module.css"
+import PostList from "./posts/PostList";
+import classes from "./HomePage.module.css"
 
 
 
@@ -33,15 +33,17 @@ export default function Main(){
        
     if(isLoading){
       return(
-        <section>
-          <p>IS LOADING!!!</p>
-        </section>
+        <div className={classes.loader}>
+          <div>
+
+          </div>
+        </div>
       );
     }
       
 
     return (
-      <section>
+      <section className={classes.section}>
         <h1 className={classes.h1}>Posty</h1>
         <PostList posts={loadedPost} />
       </section>
